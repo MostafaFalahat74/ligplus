@@ -1,8 +1,20 @@
-$color-dark: #262626;
-$color-black: #000;
-$color-primary: #d3ab55;
-$color-secondary : #bbb;
-*{
+$color-white: #ffffff;
+$color-gray: #a99a86;
+$color-primary: #6495ed;
+$color-yellow: #d3ab55;
+$color-secondary: #bbb;
+$color-pink: #ffc0cb;
+$font-size: 18px;
+
+@mixin elementSize() {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 2px;
+    font-size: $font-size;
+}
+
+* {
     padding: 0;
     margin: 0;
 }
@@ -11,7 +23,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vh;
-    height: 100vw;
-  }
-  
+}
+.btn,
+.input {
+    @include elementSize();
+}
+.input {
+    outline: none;
+    color: $color-white;
+}
+.btn-pink,
+.input-pink {
+    background-color: $color-pink;
+}
+.btn-yellow,
+.input-yellow {
+    background-color: $color-yellow;
+}
+.btn-primary,
+.input-primary {
+    background-color: $color-primary;
+}
+.btn-gray,
+.input-gray {
+    background-color: $color-gray;
+}

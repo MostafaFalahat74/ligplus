@@ -1,15 +1,43 @@
 .signup {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
-// .login-image{
-//   width: 100%;
-//   img{
-//     width: 100%;  
-//   }
-// }
-// .login-input{ 
-//     width: 100%;
-// }
+.login-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  img {
+    width: 80%;
+  }
+}
+.login-inputs {
+  width: 50%;
+}
+.signup-input{
+  &::placeholder{
+    color: $color-white;
+  }
+}
+.signup-button{
+  color: white;
+}
+.text{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 50%;
+  font-size: 18px;
+  padding: 3px;
+}
+.row-login-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
