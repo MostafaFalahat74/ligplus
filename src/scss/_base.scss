@@ -1,0 +1,17 @@
+$color-dark: #262626;
+$color-black: #000;
+$color-primary: #d3ab55;
+$color-secondary : #bbb;
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vh;
+    height: 100vw;
+  }
+  
