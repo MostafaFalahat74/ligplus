@@ -1,0 +1,65 @@
+.left-side-init {
+    display: flex;
+    flex-direction: column;
+    .init-left-top {
+        display: flex;
+        .left-top-elemet {
+            width: 16.666%;
+            img {
+                width: 50%;
+            }
+        }
+    }
+    .init-left-body {
+        display: flex;
+        .left-side {
+            width: 20%;
+            .left-side-element {
+                width: 100%;
+                img {
+                    width: 40%;
+                }
+            }
+        }
+        .right-side {
+            width: 80%;
+            display: flex;
+            justify-content: right;
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
+
+.right-side-init {
+    .init-right-top {
+        flex-wrap: wrap;
+        display: flex;
+        .left-section {
+            display: flex;
+            width: 50%;
+            img {
+                width: 62%;
+            }
+        }
+        .right-section {
+            width: 50%;
+            margin-top: 30px;
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
+
+.stadium {
+    width: 50%;
+    font-size: 28;
+    .name, .lig,.like {
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        text-align: right;
+    }
+}

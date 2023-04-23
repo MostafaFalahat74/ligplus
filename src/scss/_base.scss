@@ -1,6 +1,7 @@
 $color-white: #ffffff;
 $color-black: #000000;
 $color-gray: #a99a86;
+$color-blue: blue;
 $color-primary: #6495ed;
 $color-yellow: #d3ab55;
 $color-secondary: #bbb;
@@ -49,3 +50,15 @@ body {
 .input-gray {
     background-color: $color-gray;
 }
+
+.base {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  .row{
+    display: block;
+  }

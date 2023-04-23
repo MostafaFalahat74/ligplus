@@ -2,8 +2,8 @@ import React from 'react'
 import fotball from './../images/fotbal-ground.png';
 const Authenticate = () => {
     return (
-        <div className='signup'>
-            <div className='login-image'>
+        <div className='base'>
+            <div className='login-image half-page middle-border'>
                 <img src={fotball} />
             </div>
             <div className='login-inputs'>

@@ -3,8 +3,8 @@ import tree from './../images/tree.jpg';
 
 const Signup = () => {
     return (
-        <div className='signup'>
-            <div className='login-image'>
+        <div className='base'>
+            <div className='login-image half-page middle-border'>
                 <img src={tree} />
             </div>
             <div className='login-inputs'>
