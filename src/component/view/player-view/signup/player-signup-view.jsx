@@ -1,11 +1,10 @@
-import React from 'react';
-import tree from './../images/tree.jpg';
+import React from 'react'
 
-const Signup = () => {
+const PlayerSignupView = () => {
     return (
         <div className='base'>
             <div className='login-image half-page middle-border'>
-                <img src={tree} />
+                {/* <img src={tree} /> */}
             </div>
             <div className='login-inputs'>
                 <div className='row-login-item'>
@@ -19,4 +18,4 @@ const Signup = () => {
     )
 }
 
-export default Signup
+export default PlayerSignupView

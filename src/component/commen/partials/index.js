@@ -1,0 +1,1 @@
+export { SbmitButtonComponnent as SbmitButton } from "./buttons/submitbutton/submit.button.componnet"
