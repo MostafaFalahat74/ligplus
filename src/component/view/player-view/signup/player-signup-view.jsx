@@ -1,9 +1,13 @@
 import React from 'react';
-import {TextFildInputComponent} from '../../../commen/partials/inputs/textFild-input.component'
-
+import { TextFildInputComponent } from '../../../commen/partials/inputs/textFild-input.component'
+import {SubmitButtonCompoent } from '../../../commen/partials/buttons/submit-button/submit.button.component'
 const PlayerSignupView = () => {
     return (
-        <TextFildInputComponent>xxx</TextFildInputComponent>
+        <>
+                {/* <TextFildInputComponent type={'text'} className={'secondary'} placeholder={'test'}/> */}
+                <SubmitButtonCompoent className={'primary'} title={'ff'}/>
+
+        </>
         // <div className='base'>
         //     <div className='login-image half-page middle-border'>
         //         {/* <img src={tree} /> */}
