@@ -1,9 +1,30 @@
 import React from 'react';
-import {TextFildInputComponent} from '../../../commen/partials/inputs/textFild-input.component'
-
+import {TextFild ,SubmitButton} from '../../../commen/partials'
+import { GlobalStyle as GS } from "../../../../assets/style/global-style";
+import tree from '../../.././../assets/images/tree.jpg'
 const PlayerSignupView = () => {
     return (
-        <TextFildInputComponent>xxx</TextFildInputComponent>
+        <GS.FullCenterDiv>
+            <GS.HalfPage>
+                <GS.LoginImg src={tree} />
+            </GS.HalfPage>
+            <GS.HalfPage>
+                <GS.Row>
+                    <TextFild />
+                    <SubmitButton className={'warning'} title={'ff'} />
+                </GS.Row>
+                <GS.Row>
+                    <SubmitButton className={'warning'} title={'ff'} />
+                    <SubmitButton className={'warning'} title={'ff'} />
+                </GS.Row>
+            </GS.HalfPage>
+
+
+            {/* <TextFildInputComponent type={'text'} className={'primary'} placeholder={'test'}/>  */}
+
+
+
+        </GS.FullCenterDiv>
         // <div className='base'>
         //     <div className='login-image half-page middle-border'>
         //         {/* <img src={tree} /> */}

@@ -1,13 +1,19 @@
-import styled,{input} from 'styled-components'
-// const Button = styled.input`
-export const TextFildInputComponentStyle = styled.input`
+import styled from 'styled-components'
+const TextFildInput = styled.input`
   font-size: 1.5em;
   text-align: center;
-  color: palevioletred;
+  color: white;
+
+  &.secondary {
+    background-color: secondary;
+  }
+  &.primary {
+    background-color: blue;
+
+  }
 `;
-// export const TextFildInputComponentStyle={
-//     input
-// }
-// export const TextFildInputComponentStyle={
-//     input
-// }
+
+
+export const TextFileStyleCompoents = {
+  TextFildInput
+}
