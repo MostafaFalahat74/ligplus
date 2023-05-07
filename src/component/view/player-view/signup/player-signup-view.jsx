@@ -4,8 +4,8 @@ import {SubmitButtonCompoent } from '../../../commen/partials/buttons/submit-but
 const PlayerSignupView = () => {
     return (
         <>
-                {/* <TextFildInputComponent type={'text'} className={'secondary'} placeholder={'test'}/> */}
-                <SubmitButtonCompoent className={'primary'} title={'ff'}/>
+                 {/* <TextFildInputComponent type={'text'} className={'primary'} placeholder={'test'}/>  */}
+                <SubmitButtonCompoent className={'warning'} title={'ff'}/>
 
         </>
         // <div className='base'>
