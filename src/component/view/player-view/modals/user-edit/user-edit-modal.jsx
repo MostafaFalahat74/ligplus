@@ -9,29 +9,34 @@ const UserEditModal = () => {
             </div>
             <div className="body">
                 <div className="user-img">
-                   <img sizes='2' src={user} />
+                    <img src={user} />
                 </div>
                 <div className="info">
-                    <input placeholder='نام و نام خانوادگی' />
-                    <div>
-                        <select>
-                            <option>جنسیت</option>
-                        </select>
-                        <select>
+                    <input className='name' placeholder='نام و نام خانوادگی' />
+                    <div className='gender-and-place'>
+                        <select className='place'>
                             <option>محل زندگی</option>
                         </select>
+                        <select className='gender'>
+                            <option>جنسیت</option>
+                        </select>
                     </div>
-                    <div>
-                        <input type='checkbox' />
-                        <span>قوانین رو می پذیرم</span>
-                        <input type='date' placeholder='تاریخ تولد' />
+                    <div className='rule'>
+                        <div className='accept-rule'>
+                            <span>قوانین رو می پذیرم</span>
+                            <input type='checkbox' />
+                        </div>
+                        <input className='date' type='date' placeholder='تاریخ تولد' />
                     </div>
-                    <div>
-                        <input placeholder='کد معرف' />
-                        <span>معرف دارم </span>
-                        <input type='checkbox' />
+                    <div className='representer'>
+                        <input className='representer-code' placeholder='کد معرف' />
+                        <div className='chk-representer'>
+                            <span>معرف دارم </span>
+                            <input type='checkbox' />
+                        </div>
                     </div>
                 </div>
+
             </div>
             <div className="footer">
                 <button>
