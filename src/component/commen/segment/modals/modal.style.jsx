@@ -7,6 +7,7 @@ const Modal=styled.div`
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
 
+
     &.display-block {
         display: block;
       }
@@ -24,6 +25,7 @@ const Body=styled.section`
             top:50%;
             left:50%;
             transform: translate(-50%,-50%);  
+            flex-direction: column;
           } 
           &.left{
                 position: absolute;

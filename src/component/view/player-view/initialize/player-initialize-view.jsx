@@ -1,5 +1,6 @@
 import React , {useState} from 'react'
 import { ModalCompoent } from '../../../commen/segment/modals/modal'
+import UserEditModal from '../modals/user-edit/user-edit-modal'
 
 const PlayerInitializeView = () => {
   const [show, setShow] = useState(false);
@@ -10,7 +11,7 @@ const PlayerInitializeView = () => {
   return (
     <>
       <button onClick={hanndleShow}>test</button>
-      <ModalCompoent show={show} size={'big'} side={'center'}> ttttttttttt</ModalCompoent>
+      <ModalCompoent show={show} size={'small'} side={'center'}> <UserEditModal/></ModalCompoent>
     </>
   )
 }

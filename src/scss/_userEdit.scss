@@ -1,2 +1,17 @@
-.userEdit{
+.UserEdit{
+    width: 100%;
+}
+.header input{
+    width: 90%;
+    border: 2px solid white;
+    height: 40px;
+    background-color: transparent;
+    text-align: right;
+    color: white;
+    outline: none;
+    font-size: 20px;
+    ::placeholder{
+        color: white;
+        font-size: 25px;
+    }
 }
