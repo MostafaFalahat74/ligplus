@@ -2,8 +2,12 @@ import styled from 'styled-components'
 const LinkButton = styled.button`
   font-size: 1.5em;
   text-align: center;
+  height:45px;
+  border-radius: 5px;
+  margin:5px 5px 10px 10px;
   color: black;
-
+  border: none;
+  outline: none;
   &.primary {
     background-color: blue;
   }
@@ -13,8 +17,14 @@ const LinkButton = styled.button`
   &.danger {
     background-color: red;
   }
-  &.danger {
-    background-color: red;
+  &.big{
+    width:72% ;
+  }
+  &.small{
+    width:28% ;
+  }
+  &.medium{
+    width:47% ;
   }
 `;
 

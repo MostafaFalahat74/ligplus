@@ -12,7 +12,7 @@ const PlayerInitializeView = () => {
   return (
     <>
       <button onClick={hanndleShow}>test</button>
-      <ModalCompoent show={show} size={'small'} side={'center'}> <ReadLawsModal/></ModalCompoent>
+      <ModalCompoent show={show} size={'small'} side={'center'}> <UserEditModal/></ModalCompoent>
     </>
   )
 }

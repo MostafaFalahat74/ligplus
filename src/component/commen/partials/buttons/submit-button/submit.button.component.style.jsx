@@ -4,18 +4,21 @@ const SubmitButton = styled.button`
   text-align: center;
   color: black;
   border: none;
-  width:100% ;
+  outline: none;
+  height:45px;
+  border-radius: 5px;
+  margin:5px 5px 10px 10px;
   &.warning {
     background-color: yellow;
   }
   &.big{
-    width:250px ;
+    width:72% ;
   }
   &.small{
-    width:150px ;
+    width:28% ;
   }
   &.medium{
-    width:200px ;
+    width:47% ;
   }
 `;
 
