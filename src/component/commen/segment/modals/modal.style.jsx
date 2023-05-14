@@ -51,7 +51,7 @@ const Body=styled.section`
           }  
           &.small{
                 width: 50%;
-                height: 80%;        
+                height: 50%;        
           }  
 `;
 export const ModalStyle = {

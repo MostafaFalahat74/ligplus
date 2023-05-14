@@ -1,5 +1,4 @@
 import { UserEditModalStyle as U } from '../user-edit/user-edit-modal.style'
-import user from '../../../../../assets/images/user.png'
 const UserEditModal = () => {
 
     return (
@@ -9,34 +8,29 @@ const UserEditModal = () => {
             </div>
             <div className="body">
                 <div className="user-img">
-                    <img src={user} />
+                    <h1>cccccc</h1>
                 </div>
                 <div className="info">
-                    <input className='name' placeholder='نام و نام خانوادگی' />
-                    <div className='gender-and-place'>
-                        <select className='place'>
-                            <option>محل زندگی</option>
-                        </select>
-                        <select className='gender'>
+                    <input placeholder='نام و نام خانوادگی' />
+                    <div>
+                        <select>
                             <option>جنسیت</option>
                         </select>
+                        <select>
+                            <option>محل زندگی</option>
+                        </select>
                     </div>
-                    <div className='rule'>
-                        <div className='accept-rule'>
-                            <span>قوانین رو می پذیرم</span>
-                            <input type='checkbox' />
-                        </div>
-                        <input className='date' type='date' placeholder='تاریخ تولد' />
+                    <div>
+                        <input type='checkbox' />
+                        <span>قوانین رو می پذیرم</span>
+                        <input type='date' placeholder='تاریخ تولد' />
                     </div>
-                    <div className='representer'>
-                        <input className='representer-code' placeholder='کد معرف' />
-                        <div className='chk-representer'>
-                            <span>معرف دارم </span>
-                            <input type='checkbox' />
-                        </div>
+                    <div>
+                        <input placeholder='کد معرف' />
+                        <span>معرف دارم </span>
+                        <input type='checkbox' />
                     </div>
                 </div>
-
             </div>
             <div className="footer">
                 <button>
