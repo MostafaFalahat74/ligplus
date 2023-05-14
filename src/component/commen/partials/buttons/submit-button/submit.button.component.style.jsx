@@ -3,9 +3,19 @@ const SubmitButton = styled.button`
   font-size: 1.5em;
   text-align: center;
   color: black;
-  width:250px ;
+  border: none;
+  width:100% ;
   &.warning {
     background-color: yellow;
+  }
+  &.big{
+    width:250px ;
+  }
+  &.small{
+    width:150px ;
+  }
+  &.medium{
+    width:200px ;
   }
 `;
 

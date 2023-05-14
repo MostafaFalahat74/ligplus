@@ -23,6 +23,7 @@ width: 80%;
 
 const Row=styled.div`
 display: block;
+
 ;`
 export const GlobalStyle = {
     FullCenterDiv,

@@ -11,10 +11,10 @@ const PlayerSignupView = () => {
             <GS.HalfPage>
                 <GS.Row>
                     <TextFild />
-                    <SubmitButton className={'warning'} title={'ff'} />
+                    <SubmitButton className={'warning '} title={'بعدی'} />
                 </GS.Row>
                 <GS.Row>
-                    <SubmitButton className={'warning'} title={'ff'} />
+                    <SubmitButton className={'warning'} title={'1111111111'} />
                     <SubmitButton className={'warning'} title={'ff'} />
                 </GS.Row>
             </GS.HalfPage>
