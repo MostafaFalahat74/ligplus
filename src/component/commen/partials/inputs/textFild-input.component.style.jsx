@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { TextField as TextFieldMUI } from "@mui/material";
 const TextFildInput = styled.input`
   font-size: 1.5em;
   text-align: center;
@@ -15,7 +16,7 @@ const TextFildInput = styled.input`
     background-color: blue;
   }
   &.x-large{
-    width:72% ;
+    width:90% ;
   }
   &.big{
     width:72% ;
