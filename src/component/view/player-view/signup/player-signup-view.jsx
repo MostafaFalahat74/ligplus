@@ -23,6 +23,9 @@ const PlayerSignupView = () => {
             .min(3, t("must be at least 3 characters"))
             .max(64, t("must not be greater than 64 characters")),
     });
+    const handleMobileChange=(e)=>{
+        console.log(e)
+    }
     return (
         <Formik
             enableReinitialize
@@ -31,6 +34,7 @@ const PlayerSignupView = () => {
             }}
             validationSchema={productValidation}
             onSubmit={(e) => console.log('ddddddsada222')}
+            onChange={(e) => handleMobileChange(e)}
         >
             {(formik) => (
                 <GS.FullCenterDiv>
@@ -43,7 +47,9 @@ const PlayerSignupView = () => {
                                 <TextFild
                                     type={"text"}
                                     name={"mobile"}
+                                    label={t("mobile")}
                                     placeholder={t("mobile placeholder")}
+                                    onChange={handleMobileChange("mobile")}
                                     className={'x-large'}
                                 />
                                 <SubmitButton className={'warning small'} title={t("next")} />

@@ -18,9 +18,9 @@ export const TextFildInputComponent = ({
                 className={field.className}
                 placeholder={field.placeholder}
                 type={field.type}
-                // variant="outlined"
+                 label={label}
                 {...props}
-                {...field}
+                {...field}           
                 multiline={multiline}
             />
             {meta.touched && meta.error && (
