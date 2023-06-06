@@ -1,0 +1,68 @@
+import axios from "axios";
+import { bodyTypes } from '@constants/content/types/bodyTypes';
+
+let dispatch = null;
+export const setDispatch = (d) => {
+    dispatch = d;
+};
+
+export const callApi = async (requestData) => {
+    const { url, body, method, bodyType, params, baseURL } = requestData;
+    let data;
+    let ContentType;
+
+    if (bodyType === bodyTypes.formData) {
+        const bodyFormData = new FormData();
+
+        Object.keys(body).forEach((item) =>
+            bodyFormData.append(item, body[item])
+        );
+
+        data = bodyFormData;
+        ContentType = "multipart/form-data";
+    } else {
+        data = body;
+        ContentType = "application/json";
+    }
+    try {
+        const response = await axios({
+            url: url,
+            method: method,
+            baseURL: baseURL,
+            headers: {
+                "X-Requested-With": "XMLHttpRequest",
+                "Content-Type": ContentType,
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods":
+                    "GET, POST, OPTIONS, PUT, PATCH, DELETE",
+                "Access-Control-Allow-Headers":
+                    "Origin, X-Requested-With, Content-Type, Accept",
+            },
+            data: data,
+            params: params,
+        });
+        if (response?.status === 500) {
+            console.log(response);
+
+        } else if (response?.status === "warning") {
+            const message = Object.values(response?.data?.status?.message)[0];
+
+        } else return response?.data;
+    } catch (error) {
+        // Error 😨
+        console.log(error);
+        if (error.response?.data?.status?.type === "warning") {
+        }
+
+        if (error.response?.status === 500) {
+            console.log(error);
+        }
+
+        /*
+         * The request was made and the server responded with a
+         * status code that falls out of the range of 2xx
+         */
+        return error?.response?.data;
+    }
+
+}

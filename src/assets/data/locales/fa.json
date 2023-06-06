@@ -1,0 +1,8 @@
+{
+    "next":"بعدی",
+    "Welcome": "خوش آمدید به ریکت",
+    "required field":"این فیلد اجباری میباشد",
+    "must be at least 3 characters":"باید بیشتر از 3 کاراکتر باشد",
+    "must not be greater than 64 characters":"باید بیشتر از 64 کاراکتر باشد",
+    "mobile placeholder":"0912 ..."
+}
