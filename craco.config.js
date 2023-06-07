@@ -9,7 +9,8 @@ module.exports = {
         '@components': path.resolve(__dirname, 'src/component'),
         "@images": path.resolve(__dirname, 'src/assets/images'),
         "@global" : path.resolve(__dirname, 'src/assets/style'),
-        "@pubic" : path.resolve(__dirname, 'pubic')
+        "@pubic" : path.resolve(__dirname, 'pubic'),
+        "@constants" : path.resolve(__dirname, 'src/constants')
       }
     }
   }
