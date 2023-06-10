@@ -8,10 +8,12 @@ import * as Yup from "yup";
 import { Formik } from "formik";
 import { endpoints ,callApi } from "@components/config/callApi";
 import { requestMethodes } from "@constants/content";
+import { useNavigate } from "react-router-dom";
 
 
 const PlayerSignupView = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     const [form, setForm] = useState({
 
         mobile: "",
@@ -27,7 +29,7 @@ const PlayerSignupView = () => {
     });
     const handleMobileChange = (e) => {
         const { name, value } = e.target;
-        //delete formErrors[name];
+        delete formErrors[name];
         setForm({ ...form, [name]: value });
         console.log(form)
     }
@@ -40,17 +42,19 @@ const PlayerSignupView = () => {
             };
             const result = await callApi({
                 baseURL: baseURL9000,
-                url: `${v1}/user`,
+                url: `${v1}/signup`,
+              
                 method: requestMethodes.post,
                 body: bodyForm,
             });
-
-            if (result?.status === true) {
-                navigate("/client");
-                toastContainer(
-                    notificationTypes.success,
-                    t("Added Successfully")
-                );
+console.log(result)
+            if (result?.msgcode === 1000) {
+                console.log("ya ali")
+                navigate("/authenticate");
+       
+            }
+            else if (result?.msgcode === 5000) {
+                formErrors.mobile="xxxxxxx"
             } else {
                 setForm((prevState) => ({
                     ...prevState,
@@ -65,6 +69,8 @@ const PlayerSignupView = () => {
           console.log("error in sever");
         }
 }
+
+
 return (
 
     <GS.FullCenterDiv>

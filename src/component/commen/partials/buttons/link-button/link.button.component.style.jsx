@@ -1,5 +1,7 @@
-import styled from 'styled-components'
-const LinkButton = styled.button`
+// import styled from 'styled-components'
+import styled from "@emotion/styled/macro";
+import { NavLink } from "react-router-dom";
+const LinkButton = styled(NavLink)`
   font-size: 1.5em;
   text-align: center;
   height:45px;

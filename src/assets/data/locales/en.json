@@ -4,5 +4,9 @@
     "required field":"required field",
     "must be at least 3 characters":"must be at least 3 characters",
     "must not be greater than 64 characters":"must not be greater than 64 characters",
-    "mobile placeholder":"0912 ..."
+    "mobile placeholder":"0912 ...",
+    "must be 5 characters":"must be 5 characters",
+    "verification code":"12345",
+    "edit mobile number":"edit mobile number",
+    "resend code":"resend code"
 }
