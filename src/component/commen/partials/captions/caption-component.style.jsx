@@ -12,6 +12,12 @@ const Typography = styled.p`
     &.medium{
       width:75% ;
     }
+
+    @media screen and (max-width: 500px) {
+      font-weight: 200;
+      font-size: 15px;
+    }
+
 `;
 
 export const CaptionComponentStyle = {

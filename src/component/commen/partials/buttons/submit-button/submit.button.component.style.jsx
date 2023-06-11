@@ -20,6 +20,9 @@ const SubmitButton = styled.button`
   &.medium{
     width:47% ;
   }
+  @media screen and (max-width: 500px) {
+    font-size: 13px;
+  }
 `;
 
 

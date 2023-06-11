@@ -103,11 +103,11 @@ return (
                 )}
             </Formik>
             <GS.Row className='right'>
-                <CaptionComponent className={'big'}>جهت ثبت نام یا ورود شماره موبایل</CaptionComponent>
+                <CaptionComponent className={'big'}>{t("enter your mobile number for login or reigister")}</CaptionComponent>
             </GS.Row>
-            <GS.Row className='right'>
+            {/* <GS.Row className='right'>
                 <CaptionComponent className={'medium'}>خود را وارد نمایید</CaptionComponent>
-            </GS.Row>
+            </GS.Row> */}
         </GS.HalfPage>
     </GS.FullCenterDiv>
 

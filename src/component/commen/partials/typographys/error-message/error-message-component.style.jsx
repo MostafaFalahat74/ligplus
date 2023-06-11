@@ -6,6 +6,9 @@ const Typography = styled(TypographyMUI)`
     margin-top: 5px;
     display:"block";
     color: red;
+    @media screen and (max-width: 500px) {
+        font-size: 14px;
+      }
 `;
 
 export const ErrorMessageComponentStyle = {
