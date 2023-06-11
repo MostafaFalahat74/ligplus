@@ -14,9 +14,10 @@ const PlayerInitializeView = () => {
 
   return (
     <>
-      {/* <button onClick={hanndleShow}>test</button> */}
-      {/* <ModalCompoent show={show} size={'small'} side={'center'}> <UserEditModal/></ModalCompoent> */}
-      <S.InitializeContainer>
+      <button onClick={hanndleShow}>test</button> 
+       <ModalCompoent show={show} size={'small'} side={'center'}> <UserEditModal/></ModalCompoent>
+
+      {/* <S.InitializeContainer>
         <S.InitializePlayerProfile>
           <GS.Column>
             <S.Item>
@@ -137,7 +138,7 @@ const PlayerInitializeView = () => {
 
         </S.InitializePlayerHeaderRightBar >
 
-      </S.InitializeContainer>
+      </S.InitializeContainer> */}
     </>
   )
 }

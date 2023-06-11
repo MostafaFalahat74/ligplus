@@ -10,11 +10,16 @@ const UserEditModal = () => {
                 <E.UserEditBodyInfo>
                     <E.UserEditBodyFullName placeholder='نام و نام خانوادگی ...' />
                     <E.UserEditBodyRow>
-                        <E.UserEditBodyGenderAndLocation placeholder='aaa' />
-                        <E.UserEditBodyGenderAndLocation placeholder='nnnn' />
+                        <E.UserEditBodyGenderAndLocation placeholder='جنسیت' />
+                        <E.UserEditBodyGenderAndLocation placeholder='محل زندگی' />
                     </E.UserEditBodyRow>
                     <E.UserEditBodyRow>
-                        <E.UserEditBodyGenderAndLocation placeholder='aaa' />
+                        <Gs.HalfPage>
+                            <E.UserEditBodyGenderAndLocation placeholder='تاریخ تولد' />
+                        </Gs.HalfPage>
+                        <Gs.HalfPage>
+                            <E.UserEditBodyGenderAndLocation placeholder='تاریخ تولد' />
+                        </Gs.HalfPage>
                     </E.UserEditBodyRow>
                 </E.UserEditBodyInfo>
                 <E.UserEditBodyImg>

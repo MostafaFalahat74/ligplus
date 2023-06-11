@@ -35,8 +35,7 @@ justify-content: center;
 `;
 const LoginImg = styled.img`
 width: 80%;
-`
-  ;
+` ;
 
 
 const Row = styled.div`
@@ -64,6 +63,7 @@ justify-content: center;
 width: 100%;
 height: 100%;
 `;
+
 export const GlobalStyle = {
   FullCenterDiv,
   MiddleBorderLine,
