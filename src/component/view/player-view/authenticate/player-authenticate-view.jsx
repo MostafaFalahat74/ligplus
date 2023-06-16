@@ -8,11 +8,14 @@ import * as Yup from "yup";
 import { Formik } from "formik";
 import { endpoints, callApi } from "@components/config/callApi";
 import { requestMethodes } from "@constants/content";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const PlayerAuthenticateView = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  // const state= useLocation();
+  // const {mobile}=state;
+  // console.log('fir)((+st'+mobile)
   const [form, setForm] = useState({
 
     verificationCode: "",
@@ -32,7 +35,6 @@ const PlayerAuthenticateView = () => {
     console.log(form)
   }
   const handleSubmit =  (e) => {
-   e.preventDefult();
    navigate("/initialize");
   }
   return (

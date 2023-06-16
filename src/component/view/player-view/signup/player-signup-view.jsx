@@ -6,14 +6,16 @@ import { GlobalStyle as GS } from "@global/global-style";
 import tree from '@images/tree.jpg';
 import * as Yup from "yup";
 import { Formik } from "formik";
-import { endpoints ,callApi } from "@components/config/callApi";
+import { endpoints, callApi } from "@components/config/callApi";
 import { requestMethodes } from "@constants/content";
 import { useNavigate } from "react-router-dom";
+import { Loading } from "@components/commen/segment"
 
 
 const PlayerSignupView = () => {
     const { t } = useTranslation();
     const navigate = useNavigate();
+    const [isRecivedData, setRecivedData] = useState(false);
     const [form, setForm] = useState({
 
         mobile: "",
@@ -35,6 +37,7 @@ const PlayerSignupView = () => {
     }
 
     const handleSubmit = async (e) => {
+        setRecivedData(true);
         try {
             const { baseURL9000, v1 } = endpoints;
             const bodyForm = {
@@ -43,18 +46,18 @@ const PlayerSignupView = () => {
             const result = await callApi({
                 baseURL: baseURL9000,
                 url: `${v1}/signup`,
-              
+
                 method: requestMethodes.post,
                 body: bodyForm,
             });
-console.log(result)
+            setRecivedData(false);
+            console.log(result)
             if (result?.msgcode === 1000) {
-                console.log("ya ali")
-                navigate("/authenticate");
-       
+                navigate("/authenticate")
+            //  navigate("/authenticate" ,{state:{mobile:mobile}})
             }
             else if (result?.msgcode === 5000) {
-                formErrors.mobile="xxxxxxx"
+                formErrors.mobile = "xxxxxxx"
             } else {
                 setForm((prevState) => ({
                     ...prevState,
@@ -66,53 +69,57 @@ console.log(result)
             }
         }
         catch (error) {
-          console.log("error in sever");
+            console.log("error in sever");
         }
-}
+    }
+    return (
+        <>
+            {
+                isRecivedData ?
+                <Loading>
+                </Loading>
+                :
+                    <GS.FullCenterDiv>
+                        <GS.HalfPage>
+                            <GS.LoginImg src={tree} />
+                        </GS.HalfPage>
+                        <GS.HalfPage>
+                            <Formik
+                                enableReinitialize
+                                initialValues={{
+                                    mobile: ""
+                                }}
+                                validationSchema={productValidation}
+                                onSubmit={(e) => handleSubmit(e)}
 
+                            >
+                                {(formik) => (
+                                    <GS.SubmitForm onChange={handleMobileChange}>
+                                        <GS.Row>
+                                            <TextFild
+                                                type={"text"}
+                                                name={"mobile"}
+                                                label={t("mobile")}
+                                                placeholder={t("mobile placeholder")}
+                                                className={'x-large'}
+                                            />
+                                            <SubmitButton className={'warning small'} title={t("next")} />
+                                        </GS.Row>
+                                    </GS.SubmitForm>
+                                )}
+                            </Formik>
+                            <GS.Row className='right'>
+                                <CaptionComponent className={'big'}>{t("enter your mobile number for login or reigister")}</CaptionComponent>
+                            </GS.Row>
+               
+                        </GS.HalfPage>
+                    </GS.FullCenterDiv>
+     
+  
+            }
+        </>
 
-return (
-
-    <GS.FullCenterDiv>
-        <GS.HalfPage>
-            <GS.LoginImg src={tree} />
-        </GS.HalfPage>
-        <GS.HalfPage>
-            <Formik
-                enableReinitialize
-                initialValues={{
-                    mobile: ""
-                }}
-                validationSchema={productValidation}
-                onSubmit={(e) => handleSubmit(e)}
-
-            >
-                {(formik) => (
-                    <GS.SubmitForm onChange={handleMobileChange}>
-                        <GS.Row>
-                            <TextFild
-                                type={"text"}
-                                name={"mobile"}
-                                label={t("mobile")}
-                                placeholder={t("mobile placeholder")}
-                                className={'x-large'}
-                            />
-                            <SubmitButton className={'warning small'} title={t("next")} />
-                        </GS.Row>
-                    </GS.SubmitForm>
-                )}
-            </Formik>
-            <GS.Row className='right'>
-                <CaptionComponent className={'big'}>{t("enter your mobile number for login or reigister")}</CaptionComponent>
-            </GS.Row>
-            {/* <GS.Row className='right'>
-                <CaptionComponent className={'medium'}>خود را وارد نمایید</CaptionComponent>
-            </GS.Row> */}
-        </GS.HalfPage>
-    </GS.FullCenterDiv>
-
-
-)
+    )
 }
 
 export default PlayerSignupView
