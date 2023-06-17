@@ -31,7 +31,12 @@ display: flex;
 align-items: center;
 justify-content: center;
 `;
-const UserEditFooter = styled.div``;
+const UserEditFooter = styled.div`
+width: 80%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+`;
 const UserEditBodyInfo = styled.div`
 width: 60%;
 display: flex;
@@ -82,5 +87,6 @@ export const UserEditModalStyle = {
     UserEditBodyInfo,
     UserEditBody,
     UserEditBodyFullName,
-    UserEditBodyGenderAndLocation
+    UserEditBodyGenderAndLocation,
+    UserEditFooter
 };
