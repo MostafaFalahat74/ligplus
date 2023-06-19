@@ -11,11 +11,29 @@ const UserEditModal = () => {
         <Gs.CenterDiv className='column'>
             <E.UserEditTextFildInput className={'header'} placeholder={'در باره ی من'} />
             <E.UserEditBody>
+
+                <E.UserEditBodyImg>
+                    <E.Img src={user} />
+                </E.UserEditBodyImg>
+
                 <E.UserEditBodyInfo>
                     <E.UserEditBodyFullName placeholder='نام و نام خانوادگی ...' />
                     <E.UserEditBodyRow>
                         <E.UserEditBodyGenderAndLocation placeholder='جنسیت' />
-                        <E.UserEditBodyGenderAndLocation placeholder='محل زندگی' />
+                        {/* <E.UserEditBodyGenderAndLocation placeholder='محل زندگی' /> */}
+                        <Map center={position} zoom={zoom} onDragEnd={function (e) { console.log(e); }} >
+                            <TileLayer
+                                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                                url='https://{s}.tile.osm.org/{z}/{x}/{y}.png' />
+                            <Search
+                                position="topright"
+                                showPopup={false}
+                                provider="OpenStreetMap"
+                                showMarker={true}
+                                openSearchOnLoad={true}
+                                closeResultsOnClick={true}
+                                providerOptions={{ region: "np" }} />
+                        </Map>
                     </E.UserEditBodyRow>
 
 
@@ -46,13 +64,12 @@ const UserEditModal = () => {
                         </Gs.HalfPage>
                     </E.UserEditBodyRow>
                 </E.UserEditBodyInfo>
-                <E.UserEditBodyImg>
-                    <E.Img src={user} />
-                </E.UserEditBodyImg>
+
             </E.UserEditBody>
             <E.UserEditFooter>
-                <button>gg</button>
-                <button>mm</button>
+                fdsf
+                {/* <button>gg</button>
+                <button>mm</button> */}
             </E.UserEditFooter>
         </Gs.CenterDiv>
     )

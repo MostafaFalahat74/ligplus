@@ -36,6 +36,8 @@ width: 80%;
 display: flex;
 align-items: center;
 justify-content: space-between;
+background-color: red;
+margin-bottom: 0;
 `;
 const UserEditBodyInfo = styled.div`
 width: 60%;
@@ -43,6 +45,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+background-color: chartreuse;
 `;
 
 const UserEditBodyRow = styled.div`
@@ -62,11 +65,16 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-background-color: transparent;
+background-color: dodgerblue;
 height:45px;
 font-size:18px;
 border-radius: 5px;
 outline: none;
+border:none;
+@media screen and (max-width: 500px) {
+    font-size: 13px;
+    height:30px;
+  }
 ::placeholder{
     color: white;
     float: right;
@@ -87,6 +95,5 @@ export const UserEditModalStyle = {
     UserEditBodyInfo,
     UserEditBody,
     UserEditBodyFullName,
-    UserEditBodyGenderAndLocation,
-    UserEditFooter
+    UserEditBodyGenderAndLocation
 };
