@@ -21,7 +21,7 @@ const UserEditModal = () => {
                     <E.UserEditBodyRow>
                         <E.UserEditBodyGenderAndLocation placeholder='جنسیت' />
                         {/* <E.UserEditBodyGenderAndLocation placeholder='محل زندگی' /> */}
-                        <Map center={position} zoom={zoom} onDragEnd={function (e) { console.log(e); }} >
+                        {/* <Map center={position} zoom={zoom} onDragEnd={function (e) { console.log(e); }} >
                             <TileLayer
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                 url='https://{s}.tile.osm.org/{z}/{x}/{y}.png' />
@@ -33,7 +33,7 @@ const UserEditModal = () => {
                                 openSearchOnLoad={true}
                                 closeResultsOnClick={true}
                                 providerOptions={{ region: "np" }} />
-                        </Map>
+                        </Map> */}
                     </E.UserEditBodyRow>
 
 
